@@ -5,10 +5,10 @@
 // TIP: Use the .indexOf() method
 
 function remove(arr, valueToRemove) {
-  return; // complete this statement
+  return Array.prototype.indexOf(arr, valueToRemove); // complete this statement
 }
 
-/* 
+/*
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 var numbers = [1, 3, 3];
@@ -20,7 +20,7 @@ var newNames = remove(names, "Ashleigh");
 console.log(newNumbers);
 console.log(newNames);
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   [1, 3]

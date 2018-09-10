@@ -5,7 +5,7 @@
 
 var percentages = [1, 23, 92, 18];
 
-const percentagesFormatted = percentages.toString();
+const percentagesFormatted = percentages.map(x => x + "%");
 
 console.log(percentagesFormatted);
 

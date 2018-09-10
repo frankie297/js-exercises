@@ -12,9 +12,9 @@
 
 var startingValue = 5;
 var number = 2;
-var adding = 10;
+var ten = 10;
 
-const result = multiply(startingValue, number) + add(startingValue, startingValue);
+const result = format(multiply(startingValue, number) + ten);
 
 /* DO NOT EDIT BELOW THIS LINE */
 /* --------------------------- */

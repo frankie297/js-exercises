@@ -5,13 +5,18 @@
 // TIP: Use the .indexOf() method
 
 function remove(arr, valueToRemove) {
-  return Array.prototype.indexOf(arr, valueToRemove); // complete this statement
+  const newArray = arr.slice(0);
+  const indexToRemove = newArray.indexOf(valueToRemove, 0);
+  if (indexToRemove > -1){
+    newArray.splice(indexToRemove, 1);
+  } // complete this statement
+  return newArray;
 }
 
 /*
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
-var numbers = [1, 3, 3];
+var numbers = [1, 2, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
 var newNumbers = remove(numbers, 2);

@@ -1,10 +1,10 @@
-/* 
-A coffee machine is defined below. 
+/*
+A coffee machine is defined below.
 One can buy three different coffees.
 Complete the methods "insertMoney" and "getCoffee" to match the expected result.
 
 insertMoney takes an amount in parameter to add money in the coffee machine.
-getCoffee takes a coffee type in parameter and dispends the selected coffee 
+getCoffee takes a coffee type in parameter and dispends the selected coffee
 only if the inserted amount is greater or equal than the price of the coffee!
 */
 
@@ -17,10 +17,18 @@ var coffeeMachine = {
     },
     insertedAmount: 0,
     insertMoney: function(amount) {
-
+      return this.insertedAmount = this.insertedAmount + amount;
     },
     getCoffee: function(coffee) {
-
+      if (this.insertedAmount >= 2.40) {
+        return 'Please take your cappuccino'
+      } else if (this.insertedAmount >= 1.50) {
+        return 'Please take your blackCoffee'
+      } else if (this.insertedAmount >= 3.00) {
+        return 'Please take your flatWhite'
+      } else {
+        return 'Sorry you dont have enough money for a flatWhite'
+      }
     }
 };
 
@@ -40,4 +48,3 @@ console.log("Expected result: 'Please take your flatWhite'. Actual result: " + c
 
 coffeeMachine.insertMoney(2.40);
 console.log("Expected result: 'Sorry you don't have enough money for a flatWhite'. Actual result: " + coffeeMachine.getCoffee('flatWhite'));
-

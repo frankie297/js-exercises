@@ -5,23 +5,23 @@
 */
 
 function first(arr) {
-  return; // complete this statement
+  return numbers[0]; // complete this statement
 }
 
 function last(arr) {
-  return; // complete this statement
+  return names.slice(-1)[0]; // complete this statement
 }
 
-/* 
+/*
   DO NOT EDIT BELOW THIS LINE
   --------------------------- */
 var numbers = [1, 2, 3];
 var names = ["Irina", "Ashleigh", "Mozafar"];
 
-console.log(first(arr));
+console.log(first(numbers));
 console.log(last(names));
 
-/* 
+/*
   EXPECTED RESULT
   ---------------
   1

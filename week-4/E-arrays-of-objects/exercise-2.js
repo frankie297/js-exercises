@@ -1,4 +1,4 @@
-/* 
+/*
 An array of travel destinations is defined below.
 Each destination has a name, a distance from Glasgow, and a list of transportations available to go there.
 
@@ -34,17 +34,22 @@ var destination4 = {
 
 var travelDestinations = [destination1, destination2, destination3, destination4];
 
-/* 
+/*
 DO NOT EDIT ANYTHING ABOVE THIS LINE
 WRITE YOUR CODE BELOW
 */
 
+var destinationNamesWithin500Kms = travelDestinations.filter(destination => destination.distanceKms<=500)
+    .map((travelDestination => travelDestination.destinationName));
 
-var destinationNamesWithin500Kms = // Complete here
 
-var destinationNameReachableByFerry = // Complete here
-
-var destinationNamesMoreThan300KmsAwayByTrain = // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+var destinationNameReachableByFerry = travelDestinations.filter(
+destination => destination.transportations.includes('ferry'))
+.map((travelDestination => travelDestination.destinationName));
+//
+var destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(
+destination => destination.transportations.includes('train') && destination.distanceKms>=300 )
+.map((travelDestination => travelDestination.destinationName)); // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 
 
 /*
